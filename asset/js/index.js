@@ -1,0 +1,30 @@
+$(function ($) {
+  let url = window.location.href;
+  $('li a').each(function () {
+    if (this.href === url) {
+      $(this).closest('li').addClass('active');
+    }
+  });
+});
+$(document).ready(function () {
+  $('.news-list .fix-padding-col:lt(3)').show();
+  var items = 6;
+  var show = 3;
+  $('#expand-item').click(function () {
+    let shown = $('.news-list .fix-padding-col:visible').length + 3;
+    if (shown < items) {
+      $('.news-list .fix-padding-col:lt(' + shown + ')').show(300);
+    } else {
+      $('.news-list .fix-padding-col:lt(' + items + ')').show(300);
+      $('.more').hide();
+    }
+    if (shown === items) {
+      $("#expand-item").addClass("disable")
+      $('#expand-item').prop('disabled', true)
+    }
+  })
+})
+
+
+
+
