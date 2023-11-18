@@ -44,6 +44,20 @@
   padding: 13px 27px;
 }
 
+.btn_load_more {
+  border-radius: 46px;
+  background-color: #fff;
+  border: 1px solid rgb(46, 49, 145);
+  color: rgb(46, 49, 145);
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+  line-height: 1;
+  display: block;
+  margin: 30px auto;
+}
+
 .product_all,
 .btn_send,
 .btn_header {
@@ -577,7 +591,6 @@ body header .navbar-collapse ul .nav-item:hover .nav-link {
 body header .navbar-collapse ul li.active .nav-link {
   font-weight: 700;
 }
-body .contact-page,
 body .introduce-part,
 body .aboutUs-part,
 body .contact-page {
@@ -609,82 +622,6 @@ body .contact-page .location-decor-img img {
   position: absolute;
   left: 0;
   top: -13px;
-}
-body .location-page {
-  overflow: hidden;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  position: relative;
-  background-color: #f9f9f9;
-}
-body .location-page h4 {
-  font-size: 38px;
-  line-height: 70px;
-}
-body .location-page::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 50%;
-  height: -webkit-fill-available;
-  background-image: url("/../asset/image/bg_img/location28.png");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-body .location-page::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 50%;
-  height: -webkit-fill-available;
-  background-image: url("/../asset/image/bg_img/location47.png");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-transform: rotate(7deg) translate(0%, 5%);
-          transform: rotate(7deg) translate(0%, 5%);
-}
-body .location-page .location-infor .form-name {
-  font-family: "Alfa Slab One", cursive;
-  font-size: 38px;
-  text-align: center;
-}
-body .location-page .location-infor .form-ref {
-  height: 92px;
-  font-size: 20px;
-  color: #fff;
-  background-color: #2E3191;
-  border-radius: 15px 0 0 15px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-body .location-page .location-infor .form-ref p {
-  padding: 0;
-  text-transform: uppercase;
-}
-body .location-page .location-infor .form-fill {
-  height: 92px;
-  padding: 34px 38px;
-  font-size: 20px;
-  color: #000;
-  background-color: #fff;
-  border-radius: 0 15px 15px 0;
-  border: 1px solid rgba(128, 128, 128, 0.2);
-  -webkit-box-shadow: 0px 5px 22px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 5px 22px rgba(0, 0, 0, 0.1);
-}
-body .location-page .location-infor .form-fill select {
-  width: 100%;
 }
 body .introduce-part {
   position: relative;
@@ -766,7 +703,7 @@ body .introduce-part .introduce-part-bg .introduce-content-right .main_img img:n
   right: 20px;
 }
 body .introduce-part .services {
-  background-image: url("/../asset/image/bg_img/Layer 36 1.png");
+  background-image: url("/../asset/image/bg_img/LayerRed.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -813,9 +750,21 @@ body .introduce-part .services .container .introduce_item .introduce_item_conten
 body .products-part .banner {
   position: relative;
 }
-body .products-part .banner img {
+body .products-part .banner > img:first-child {
   display: block;
   margin-left: auto;
+}
+body .products-part .banner .bottle1 {
+  position: absolute;
+  right: 137px;
+  bottom: 5px;
+  z-index: 2;
+}
+body .products-part .banner .bottle2 {
+  position: absolute;
+  right: 190px;
+  bottom: 5px;
+  z-index: 3;
 }
 body .products-part .banner .main_title {
   position: absolute;
@@ -830,8 +779,35 @@ body .products-part .banner .main_title {
 body .products-part .banner .products-part-img {
   position: absolute;
   left: 0;
-  bottom: -115px;
+  bottom: -100px;
   z-index: 2;
+}
+body .products-part .banner .products-part-img img:first-child {
+  margin: 59px 40px;
+}
+body .products-part .banner .products-part-img .shadow-bowl {
+  position: absolute;
+  bottom: -20px;
+  left: 120px;
+  z-index: 5;
+}
+body .products-part .banner .products-part-img .jumping-fish-1 {
+  position: absolute;
+  top: 240px;
+  right: 82px;
+  z-index: 5;
+}
+body .products-part .banner .products-part-img .jumping-fish-2 {
+  position: absolute;
+  top: 128px;
+  left: -7px;
+  z-index: 4;
+}
+body .products-part .banner .products-part-img .jumping-fish-3 {
+  position: absolute;
+  top: 120px;
+  left: -25px;
+  z-index: 4;
 }
 body .products-part .products-list {
   background-color: #F1F6F8;
@@ -972,6 +948,90 @@ body .products-part .products-list .container-fluid .card-body .detail-1 {
   font-size: 18px;
   color: #474747;
   font-weight: 700;
+}
+body .location-part > img {
+  width: 100%;
+  height: auto;
+}
+body .location-part .location-list {
+  padding-bottom: 90px;
+}
+body .location-part .location-list .row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body .location-part .location-list .container {
+  max-width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+body .location-part .location-list .container .main_title {
+  padding-bottom: 44px;
+}
+body .location-part .location-list .container .location-wrap {
+  padding: 12px;
+  background-color: transparent;
+}
+body .location-part .location-list .container .location-wrap .location-item {
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(20, 23, 112, 0.13);
+          box-shadow: 0 0 10px 0 rgba(20, 23, 112, 0.13);
+  padding: 23px 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+body .location-part .location-list .container .location-wrap .location-item .location-icon {
+  width: 47px;
+  height: 47px;
+  background-color: rgb(232, 238, 240);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+body .location-part .location-list .container .location-wrap .location-item .location-icon i {
+  font-size: 22px;
+}
+body .location-part .location-list .container .location-wrap .location-item .location-name {
+  text-align: center;
+  font-family: "Quicksand";
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 16px;
+  margin-bottom: 0px;
+}
+body .location-part .location-list .container .location-wrap .location-item .location-detail {
+  text-align: center;
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+}
+body .location-part .location-list:nth-child(odd) {
+  background-color: rgb(255, 255, 255);
+}
+body .location-part .location-list:nth-child(odd) .location-item .location-icon i {
+  color: rgb(46, 49, 145);
+}
+body .location-part .location-list:nth-child(even) {
+  background-color: rgb(241, 246, 248);
+}
+body .location-part .location-list:nth-child(even) .location-item .location-icon i {
+  color: rgb(234, 35, 42);
 }
 
 .products-part-detail {
@@ -1307,25 +1367,26 @@ body .products-part .products-list .container-fluid .card-body .detail-1 {
   background-repeat: no-repeat;
   background-position: bottom -220px left 0;
   background-size: 100% auto;
-  padding-bottom: 250px !important;
+  padding-bottom: 350px;
 }
 
 .about-plug {
   background-color: rgb(184, 37, 42);
-  padding-bottom: 50px;
+  padding-bottom: 112px;
 }
 .about-plug .container {
   position: relative;
 }
 .about-plug .container img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  top: -250px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -300px;
   position: absolute;
 }
 .about-plug .container .about-plug-content {
-  padding-top: 250px;
+  padding-top: 135px;
 }
 .about-plug .about-plug-content {
   text-align: center;
@@ -1344,7 +1405,7 @@ body .products-part .products-list .container-fluid .card-body .detail-1 {
 .aboutUs-part .shadow-bowl-fishsauce {
   position: absolute;
   bottom: -63px;
-  right: 180px;
+  right: 143px;
   z-index: 1;
 }
 .aboutUs-part .main-img {
@@ -1391,7 +1452,7 @@ body .products-part .products-list .container-fluid .card-body .detail-1 {
   left: 0;
 }
 .aboutUs-part .aboutUs-content {
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 .aboutUs-part .aboutUs-content h4 {
   margin-bottom: 15px;
@@ -1403,6 +1464,9 @@ body .products-part .products-list .container-fluid .card-body .detail-1 {
   text-align: justify;
   line-height: 1.4;
   font-weight: 400;
+}
+.aboutUs-part .aboutUs-content:first-child {
+  padding-top: 5rem;
 }
 .aboutUs-part .about_prize {
   padding-top: 100px;
@@ -2023,11 +2087,6 @@ footer .footer-content .footer-item3 ul li a:hover::after {
   }
   body .media-part .media-content .video-zone .video-bg {
     border-radius: 20px;
-  }
-  body .introduce-part .prize-banner .prize-banner_header .main_title h3::before,
-  body .introduce-part .prize-banner .prize-banner_header .main_title h3::after {
-    width: 150px;
-    height: 110px;
   }
   body .products-part .card .wrap_item {
     height: 300px;
